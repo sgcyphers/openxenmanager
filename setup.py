@@ -5,7 +5,7 @@ sys.path.append('./src')
 
 setup(
     name='openxenmanager',
-    version='0.1b1',
+    version='2.0-Alpha',
     packages=['OXM', 'pygtk_chart'],
     package_dir={'': 'src'},
     url='http://github.com/OpenXenManager/openxenmanager',
@@ -23,7 +23,7 @@ setup(
                           'images_map/*'],
                   'pygtk_chart': ['data/tango.color']},
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 3 - Alpha',
         'Environment :: X11 Applications :: GTK4',
         'Intended Audience :: Information Technology',
         'Intended Audience :: System Administrators',
