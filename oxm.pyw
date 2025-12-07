@@ -25,12 +25,14 @@
 #
 # -----------------------------------------------------------------------
 
-#    Python3+ uses PyGObjact; GTK2 is obsolete
-import gi
-
 import sys
 import os
 
+#    Python3+ uses PyGObjact; GTK2 is obsolete
+import gi
+
+gi.require_version("Gtk", "4.0")
+from gi.repository import GLib, Gtk
 
 # FIXME: rather pathetic fix for ubuntu to show menus -  GTK3 migration should
 # fix this  - Removed 2025-12-05 SgC
