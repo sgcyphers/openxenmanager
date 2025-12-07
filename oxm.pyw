@@ -1,6 +1,10 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -----------------------------------------------------------------------
 # OpenXenManager
+#
+#    Updated to use Python3 and PyGObject - 2025-12-07
+#    Copyright (C) 2025  Steve Cyphers (c-three@c3cyphers.com)
+#
 #
 # Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
 #
@@ -20,12 +24,17 @@
 # USA.
 #
 # -----------------------------------------------------------------------
-import gtk
+
+#    Python3+ uses PyGObjact; GTK2 is obsolete
+import gi
+
 import sys
 import os
+
+
 # FIXME: rather pathetic fix for ubuntu to show menus -  GTK3 migration should
-# fix this
-os.environ['UBUNTU_MENUPROXY'] = '0'
+# fix this  - Removed 2025-12-05 SgC
+#  os.environ['UBUNTU_MENUPROXY'] = '0'
 
 sys.path.append('./src')
 
