@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 #
-#       plot.py
+#       chart.py
 #       
 #       Updated to use Python3 and PyGObject - 2025-12-07
 #       Steve Cyphers
+#       (Sven's original code is at github.com/SvenFesterson/pygtkChart)
 #
 #       Copyright 2008 Sven Festersen <sven@sven-festersen.de>
 #       
@@ -38,17 +39,17 @@ Author: Sven Festersen (sven@sven-festersen.de)
 """
 __docformat__ = "epytext"
 import cairo
-import gobject
-#import gtk
+import gobject   # may see conflicts/errors here (Sgc)
+import gtk       # may see conflicts/Errors here (Sgc)
 import os
 import pango
 import pangocairo
-#import pygtk
+import pygtk     # may see conflicts/Errors here (Sgc)
 
 #    Python3+ uses PyGObjact; GTK2 is obsolete
 import gi
-from gi.repository import gtk
-
+from gi.repository import Gtk
+from gi.repository import GObject
 
 from pygtk_chart.chart_object import ChartObject
 from pygtk_chart.basics import *
