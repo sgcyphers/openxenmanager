@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 #       misc.py
 # 
@@ -27,14 +27,16 @@ This module contains simple functions needed by all other modules.
 Author: Sven Festersen (sven@sven-festersen.de)
 """
 __docformat__ = "epytext"
-import cairo
 import os
+import cairo
 
 #    Python3+ uses PyGObjact; GTK2 is obsolete
 import gi
 
 gi.require_version("Gtk", "4.0")
-from gi.repository import GLib, Gtk
+from gi.repository import Gtk
+gi.require_version("Glib", "2.0")
+from gi.repository import GLib
 
 
 import pygtk_chart
