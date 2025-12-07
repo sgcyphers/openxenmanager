@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 #       chart.py
 #       
@@ -38,18 +38,26 @@ All colors that pygtkChart uses are gtk.gdk.Colors as used by PyGTK.
 Author: Sven Festersen (sven@sven-festersen.de)
 """
 __docformat__ = "epytext"
-import cairo
-import gobject   # may see conflicts/errors here (Sgc)
-import gtk       # may see conflicts/Errors here (Sgc)
 import os
-import pango
-import pangocairo
-import pygtk     # may see conflicts/Errors here (Sgc)
+import cairo
 
-#    Python3+ uses PyGObjact; GTK2 is obsolete
+#    Python3+ uses PyGObjact (gi); GTK2 is obsolete
+
 import gi
+
+gi.require_version("Gtk", "4.0")
 from gi.repository import Gtk
+gi.require_version("Gdk", "3.0")
+from gi.repository import Gdk
+gi.require_version("GObject", "2.0")
 from gi.repository import GObject
+gi.require_version("Glib", "2.0")
+from gi.repository import glib
+gi.require_version('Pango', '1.0')
+from gi.repository import Pango
+gi.require_version('PangoCairo', '1.0')
+from gi.repository import PangoCairo
+
 
 from pygtk_chart.chart_object import ChartObject
 from pygtk_chart.basics import *
