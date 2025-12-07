@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 #
 #       misc.py
-#       
+# 
+#       Updated to use Python3 and PyGObject - 2025-12-07
+#       Steve Cyphers
+#
 #       Copyright 2008 Sven Festersen <sven@sven-festersen.de>
 #       
 #       This program is free software; you can redistribute it and/or modify
@@ -25,8 +28,14 @@ Author: Sven Festersen (sven@sven-festersen.de)
 """
 __docformat__ = "epytext"
 import cairo
-import gtk
 import os
+
+#    Python3+ uses PyGObjact; GTK2 is obsolete
+import gi
+
+gi.require_version("Gtk", "4.0")
+from gi.repository import GLib, Gtk
+
 
 import pygtk_chart
 
