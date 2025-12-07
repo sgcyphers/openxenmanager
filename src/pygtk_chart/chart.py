@@ -2,6 +2,9 @@
 #
 #       plot.py
 #       
+#       Updated to use Python3 and PyGObject - 2025-12-07
+#       Steve Cyphers
+#
 #       Copyright 2008 Sven Festersen <sven@sven-festersen.de>
 #       
 #       This program is free software; you can redistribute it and/or modify
@@ -36,11 +39,16 @@ Author: Sven Festersen (sven@sven-festersen.de)
 __docformat__ = "epytext"
 import cairo
 import gobject
-import gtk
+#import gtk
 import os
 import pango
 import pangocairo
-import pygtk
+#import pygtk
+
+#    Python3+ uses PyGObjact; GTK2 is obsolete
+import gi
+from gi.repository import gtk
+
 
 from pygtk_chart.chart_object import ChartObject
 from pygtk_chart.basics import *
