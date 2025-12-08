@@ -2,6 +2,9 @@
 #
 #       chart_object.py
 #       
+#       Updated to use Python3 and PyGObject - 2025-12-07
+#       Steve Cyphers
+#
 #       Copyright 2009 Sven Festersen <sven@sven-festersen.de>
 #       
 #       This program is free software; you can redistribute it and/or modify
@@ -24,7 +27,11 @@ This module contains the ChartObject class.
 Author: Sven Festersen (sven@sven-festersen.de)
 """
 import cairo
-import gobject
+
+import gi
+gi.require_version("GObject", "2.0")
+from gi.repository import GObject
+
 
 class ChartObject(gobject.GObject):
     """
