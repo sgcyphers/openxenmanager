@@ -1,7 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
-#       text.py
+#       label.py
 #       
+#       Updated to use Python3 and PyGObject - 2025-12-08
+#       Copyright (c) 2025 - Steve Cyphers
+#
 #       Copyright 2009 Sven Festersen <sven@sven-festersen.de>
 #       
 #       This program is free software; you can redistribute it and/or modify
@@ -24,11 +27,20 @@ Contains the Label class.
 Author: Sven Festersen (sven@sven-festersen.de)
 """
 import cairo
-import gobject
-import gtk
 import math
-import pango
-import pygtk
+
+#    Python3+ uses PyGObjact; GTK2 is obsolete
+import gi
+
+gi.require_version("Gtk", "4.0")
+from gi.repository import Gtk
+gi.require_version("GObject", "2.0")
+from gi.repository import GObject
+gi.require_version("Glib", "2.0")
+from gi.repository import glib
+gi.require_version('Pango', '1.0')
+from gi.repository import Pango
+
 
 from pygtk_chart import basics
 from pygtk_chart.chart_object import ChartObject
