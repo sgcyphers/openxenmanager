@@ -1,37 +1,36 @@
 ## Author: David Markey <david.markey@citrix.com>, Citrix Systems.
-
 ## Licence: GNU LESSER GENERAL PUBLIC LICENSE V3, http://www.gnu.org/licenses/lgpl-3.0.txt
-
 ## THIS SOFTWARE COMES WITH ABSOLUTELY NO WARRANTY! USE AT YOUR OWN RISK!
-
 ## README before use.
 
+#
+#    2025-12-09 - Updated by Steve Cyphers <cthree at c3cyphers dot com>
+#    Updated for Python3 and io.StringIO from cStringIO
+#
 
 
-__version__ = "1.1.0"
-
+__version__ = "1.1.1"
 
 
 import os
 import tarfile
-import cStringIO
 import sys
 import copy
 
-## Legacy Python 2.4 stuff
+#    cStringIO is obsolete and has been removed from Python3
+import io
+from io import StringIO
 
-try:
-    import xml.etree.ElementTree as ET
-except:
-    import elementtree.ElementTree as ET
+#    Use Python 3 packages...
 
-try:
-    from hashlib import sha1
-except:
-    from sha import sha as sha1
+import xml.etree.ElementTree as ET
+import hashlib
+from hashlib import sha1 as sha1
+from uuid import uuid1 as uuid
 
-try:
-    from uuid import uuid1 as uuid
+
+#    will need to find someone with REHL/Python3 and have them test
+#    uuid there...  (SgC)
 except:
     ## RHEL/Python 2.4 is missing uuid, Dirty hack here
     import commands
