@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 #
-#       lineplot.py
+#       line_chart.py
 #
+#       Updated to use Python3 and PyGObject - 2025-12-08
+#       Copyright (c) 2025 - Steve Cyphers
+#
+#       (Sven's original code is at github.com/SvenFesterson/pygtkChart)
 #       Copyright 2008 Sven Festersen <sven@sven-festersen.de>
 #
 #       This program is free software; you can redistribute it and/or modify
@@ -24,11 +28,19 @@ Contains the LineChart widget.
 Author: Sven Festersen (sven@sven-festersen.de)
 """
 __docformat__ = "epytext"
-import gobject
 import cairo
-import gtk
 import math
 import os
+
+#    Python3+ uses PyGObjact (gi); GTK2 is obsolete
+
+import gi
+
+gi.require_version("Gtk", "4.0")
+from gi.repository import Gtk
+gi.require_version("GObject", "2.0")
+from gi.repository import GObject
+
 
 import pygtk_chart
 from pygtk_chart.basics import *
