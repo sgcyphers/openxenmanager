@@ -1,11 +1,20 @@
 # License: Public Domain
-# Original Author: John Finlay <finlay at moeraki.com>
-# http://www.daa.com.au/pipermail/pygtk/2004-September/008685.html
+# 
+#       Updated to use Python3 and PyGObject - 2025-12-08
+#       Steve Cyphers
+#
+#    Links for author are broken
+#    Original Author: John Finlay <finlay at moeraki.com>
+#    http://www.daa.com.au/pipermail/pygtk/2004-September/008685.html
 
-import gtk
-import gobject
-import pygtk
-pygtk.require('2.0')
+
+#    Python3+ uses PyGObjact; GTK2 is obsolete
+import gi
+
+gi.require_version("Gtk", "4.0")
+from gi.repository import Gtk
+gi.require_version("GObject", "2.0")
+from gi.repository import GObject
 
 
 PAD = 3
