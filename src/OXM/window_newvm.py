@@ -1,8 +1,13 @@
 # -----------------------------------------------------------------------
 # OpenXenManager
 #
-# Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
-# Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#      windows_newvm.py
+#
+#     Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
+#     Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#
+#     OpenXenManager application updated to use Python3 and PyGObject - 2025-12-08
+#     Copyright (C) 2025 Steve Cyphers <cthree at c3cyphers.com>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -20,8 +25,12 @@
 #
 # -----------------------------------------------------------------------
 import datetime
-import gtk
 from threading import Thread
+
+#    Python3+ uses PyGObjact; GTK2 is obsolete
+import gi
+gi.require_version("Gtk", "4.0")
+from gi.repository import Gtk
 
 
 class oxcWindowNewVm:
