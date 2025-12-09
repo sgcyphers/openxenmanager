@@ -1,8 +1,14 @@
 # -----------------------------------------------------------------------
 # OpenXenManager
 #
-# Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
-# Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#      window.py
+#
+#     Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
+#     Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#
+#     OpenXenManager application updated to use Python3 and PyGObject - 2025-12-08
+#     Copyright (C) 2025 Steve Cyphers <cthree at c3cyphers.com>
+#
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -22,10 +28,14 @@
 import os
 import sys
 import shutil
-import pygtk
-import pango
 
-from configobj import ConfigObj
+#    Python3+ uses PyGObjact; GTK2 is obsolete
+import gi
+gi.require_version("Gtk", "4.0")
+from gi.repository import Gtk
+gi.require_version('Pango', '1.0')
+from gi.repository import Pango
+
 from tunnel import Tunnel
 
 if os.path.dirname(sys.argv[0]):
