@@ -1,12 +1,17 @@
 # -----------------------------------------------------------------------
 # OpenXenManager
 #
-# Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
-# Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#      window_vm.py
+#
+#     Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
+#     Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#
+#     OpenXenManager application updated to use Python3 and PyGObject - 2025-12-08
+#     Copyright (C) 2025 Steve Cyphers <cthree at c3cyphers.com>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
+# as published by the Free Software Foundation; either version 3
 # of the License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -23,10 +28,16 @@ from window_vm_network import *
 from window_vm_storage import *
 from window_vm_snapshot import *
 from window_vm_performance import *
-import gtk
 import time
 import os
 import utils
+
+#    Python3+ uses PyGObjact; GTK2 is obsolete
+import gi
+gi.require_version("Gtk", "4.0")
+from gi.repository import Gtk
+
+
 selection = None
 
 
