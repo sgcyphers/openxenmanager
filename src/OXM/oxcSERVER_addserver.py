@@ -1,12 +1,15 @@
 # -----------------------------------------------------------------------
 # OpenXenManager
 #
-# Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
-# Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#       Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
+#       Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#
+#       Updated to use Python3 and PyGObject - 2025-12-08
+#       Copyright (C) 2025 Steve Cyphers <cthree at c3cyphers.com>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
+# as published by the Free Software Foundation; either version 3
 # of the License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -23,7 +26,11 @@
 import xmlrpclib
 import sys
 from threading import Thread
-import gobject
+
+#    Python3+ uses PyGObjact (gi)
+import gi
+gi.require_version("GObject", "2.0")
+from gi.repository import GObject
 
 
 class oxcSERVERaddserver(gobject.GObject):
