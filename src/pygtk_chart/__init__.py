@@ -1,7 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 #       __init__.py
 #       
+#       Updated to use Python3 and PyGObject - 2025-12-08
+#       Steve Cyphers
+#
 #       Copyright 2008 Sven Festersen <sven@sven-festersen.de>
 #       
 #       This program is free software; you can redistribute it and/or modify
