@@ -2,7 +2,7 @@
 #
 # OpenXenManager
 #
-#      capabilities.py
+#      main.py
 #
 #     Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
 #     Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
