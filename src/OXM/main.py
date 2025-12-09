@@ -7,7 +7,7 @@
 #     Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
 #     Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
 #
-#     OpenXenManager application updated to use Python3 and PyGObject - 2025-12-08
+#     OpenXenManager application updated to use Python3 and PyGObject - 2025-12-09
 #     Copyright (C) 2025 Steve Cyphers <cthree at c3cyphers.com>
 #
 # This program is free software; you can redistribute it and/or
@@ -35,7 +35,6 @@ import sys
 
 #    Python3+ uses PyGObjact; GTK2 is obsolete
 import gi
-
 gi.require_version("Gtk", "4.0")
 from gi.repository import Gtk
 
@@ -46,8 +45,8 @@ from OXM.crash_report import CrashReport
 
 # FIXME: rather pathetic fix for Ubuntu to show menus -  GTK3 migration should
 # fix this
-os.environ['UBUNTU_MENUPROXY'] = '0'
-sys.path.append('./src')
+# os.environ['UBUNTU_MENUPROXY'] = '0'
+# sys.path.append('./src')
 
 
 def main():
