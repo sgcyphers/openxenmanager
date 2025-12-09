@@ -1,4 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+#
+# put.py
+#
+#     urlparse is depreciated. Drop in replacement is urparse2 - 2025-12-08
+#     Steve Cyphers <cthree at c3cyphers.com>
+#
 """
 put.py - Python HTTP PUT Client
 Copyright 2006, Sean B. Palmer, inamidst.com
@@ -18,7 +24,9 @@ auth = {'username': 'myuser', 'password': 'mypass'}
 put.put(bytes, 'http://example.org/test', **auth)
 """
 
-import sys, httplib, urlparse
+import sys
+import httplib
+import urlparse2
 from optparse import OptionParser
 
 # True by default when running as a script
