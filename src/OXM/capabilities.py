@@ -1,13 +1,18 @@
 # -----------------------------------------------------------------------
-# OpenXenManager
+#      OpenXenManager
 #
-# Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
-# Copyright (C) 2011 Cheng Sun <chengsun9@gmail.com>
-# Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#      capabilities.py
+#
+#     Copyright (C) 2009 Alberto Gonzalez Rodriguez alberto@pesadilla.org
+#     Copyright (C) 2011 Cheng Sun <chengsun9@gmail.com>
+#     Copyright (C) 2014 Daniel Lintott <daniel@serverb.co.uk>
+#
+#     OpenXenManager application updated to use Python3 and PyGObject - 2025-12-08
+#     Copyright (C) 2025 Steve Cyphers <cthree at c3cyphers.com>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
+# as published by the Free Software Foundation; either version 3
 # of the License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
